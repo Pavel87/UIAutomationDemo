@@ -1,0 +1,72 @@
+Robotium UI demonstration application by Pavel Machala,
+test scenarios:
+
+------------------------------------------
+ testAritmeticOperationsEnterText_Test()
+------------------------------------------
+- Enter "49" in edit box
+- Press Submit button
+- Verify correct math operations (Addition, Substraction, Multiplication)
+
+
+
+----------------------------------
+testAritmeticOperationsType_Test()
+----------------------------------
+- Repeat 5 times
+- Type "14" in edit box
+- Press Submit
+- Verify correct math operations (Addition, Substraction, Multiplication)
+- Press "Clear" btn and verify the fields were restored to default
+
+
+------------------------
+testButtonsGeneral_Gen()
+------------------------
+- 3x click on about button evaluate the proper text appeared in the title and close the dialog
+- Enable Timer by clicking on "Start" button
+- Change Switch state which will show the current battery level
+- Wait 5 seconds
+- Check if the timer value is 5 seconds
+- Click on "Clear" button and check that timer was reseted
+
+
+----------------------
+testEnteringUrl_Test() 
+----------------------
+- Open URL dialog by clicking on image with cross
+- Type www.google.com in dialog edittext field
+- Press button with text "UPDATE" within the dialog
+- Find and click on TextView saying www.google.com
+- Check if the toast message has been displayed with text: "URL put in clip"
+- Click on button with label "DEMO 2" which should open new Activity with webview
+- Application will pass the url www.google.com from original activity and then we search for input field
+- Once the input is identified we will type "czech republic" in the search field
+- Search for submit button(web element) and submit the form
+- Detect text "www.czech.cz" in the google results
+- Go back to MainActivity ( press back button)
+- DemoActivity is returning constant "5" hence check if the result was retrieved by capturing toast message which appears afer transition from DemoActivity to MainActivity
+- Press "Clear" button in action bar
+- Verify that url has returned in the default state. Its value should be "www.zebra.com"
+
+
+----------------
+testGeneral()
+----------------
+- Enter "27" in top EditText   
+- Click on "Submit" button
+- Click on "Clear" button                                
+- Enter "82" in top EditText   
+- Click on "Submit" button
+- Start Timer by clicking on "Start" button
+- Click on Switch to show the battery level
+- Click on Image with cross symbol which will open dialog for entering url
+- Type "www.cnn.com" as a new url
+- Press "UPDATE" button
+- After dialog close click on url text: "www.cnn.com"
+- Check if the toast message appears
+- Clear top EditText
+- Enter "19" and press submit
+- Click on "About" button evaluate the proper text appeared in the title and close the dialog
+- Restore defaults in the MainActivity by pressing "Clear" button
+- Check whether the url has been reseted in the default value
